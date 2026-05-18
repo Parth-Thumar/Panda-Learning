@@ -15,6 +15,6 @@ import pandas as pd
 # print(data)
 
 # bollywood
-
+# pandas
 data = pd.read_csv('C:\\Users\\parth\\OneDrive\\Desktop\\Python\\Pandas 1\\bollywood.csv',index_col='movie').squeeze("columns")
 print(data)
