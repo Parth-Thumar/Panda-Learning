@@ -1,0 +1,1 @@
+print(a.sort_values(inplace=True))
