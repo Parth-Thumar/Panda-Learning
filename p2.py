@@ -1,14 +1,43 @@
 import numpy as np
 import pandas as pd
 
-runs = [101, 135, 65, 100, 120, 76, 117, 88]
-print(pd.Series(runs))
+ipl = pd.read_csv('C:\\Users\\parth\\OneDrive\\Desktop\\Backend\\Python\\Pandas 2\\ipl-matches.csv')
+movies = pd.read_csv('C:\\Users\\parth\\OneDrive\\Desktop\\Backend\\Python\\Pandas 2\\movies.csv')
 
-# custom index 
-mark = [97, 97, 86]
-subject = ['Maths', 'Chemistry', 'Physics']
-print(pd.Series(mark, index=subject))
+# shape
+print(movies.shape)
+print(ipl.shape)
 
-# setting a name 
+# dtype
+print(movies.dtypes)
 
-print(pd.Series(mark, index = subject, name = 'Parth na marks'))
+# index
+print(movies.index)
+print(ipl.index)
+
+# columns
+print(movies.columns)
+print(ipl.columns)
+
+# values
+print(ipl.values)
+
+# head and tail
+print(ipl.head(2)) # --> first 5
+print(ipl.tail()) # --> last 5
+
+# simple -random data
+print(ipl.sample(5))
+
+# info
+print(ipl.info())
+
+# describe
+print(movies.describe())
+print(ipl.describe())
+
+# isnull
+print(movies.isnull().sum())
+
+# duplicate
+print(movies.duplicated().sum())

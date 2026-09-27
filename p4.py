@@ -1,26 +1,30 @@
-# Series Attributes
-
 import numpy as np
 import pandas as pd
 
-mark = [97, 97, 86]
-subject = ['Maths', 'Chemistry', 'Physics']
-mark_s = pd.Series(mark, index= subject, name = 'Parth na marks')
+ipl = pd.read_csv('C:\\Users\\parth\\OneDrive\\Desktop\\Backend\\Python\\Pandas 2\\ipl-matches.csv')
+movies = pd.read_csv('C:\\Users\\parth\\OneDrive\\Desktop\\Backend\\Python\\Pandas 2\\movies.csv')
 
-# size
-print(mark_s.size)
+student_dicts = {
+    'Name' : ['nitish','ankit','rishabh','amit','rupesh','raj'],
+    'IQ' : [100, 80, 100, 90, 0, 0],
+    'Marks' : [80, 70, 50, 90, 0, 0],
+    'Package' : [10, 12, 8, 9, 0, 0]
+}
+students = pd.DataFrame(student_dicts,columns=['Name','IQ','Marks','Package'])
+print(student_dicts.set_index('Name'))
 
-# dtype
-print(mark_s.dtype)
+# selecting rows from a DataFrame
+# iloc - searching using index positions
+# loc - searching using index labels
 
-# name
-print(mark_s.name)
+# single row --> series
+print(movies.iloc[0])
 
-# is_unique
-print(mark_s.is_unique)
+# multiple row --> DataFrame
+print(movies.iloc[5:15:2])
 
-# index
-print(mark_s.index)
+# fancy indexing
+print(movies.iloc[[0, 4, 5]])
 
-# value
-print(mark_s.values)
+# loc
+print(students.loc['nitish'])
