@@ -5,7 +5,7 @@ data = pd.read_csv('C:\\Users\\parth\\OneDrive\\Desktop\\Python\\Pandas 1\\bolly
 
 # bollywood kisne kitni movie crate ki wo gwnerate karke dega
 # value_counts()
-
+print(data)
 print(data.value_counts())
 
 # sort_values --> inplace
